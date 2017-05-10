@@ -11,3 +11,4 @@ document.writeln("<script language=\"javascript\" src=\"http://chuyende.phongkha
 }
 document.writeln("<script language=\"javascript\" src=\"http://chuyende.phongkhamngoquyen.com/js_all/all_form.js\"></script>");
 document.writeln("<script language=\"javascript\" src=\"http://chuyende.phongkhamngoquyen.com/js_all/all_formcall.js\"></script>");
+/* */
