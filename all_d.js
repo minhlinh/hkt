@@ -176,8 +176,9 @@ $.fn.form_contact = function(options){
             if($("#LRdiv2").length<1)
             {
                 console.log('Add subiz');
-    window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",64439]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);
-            }
+    		window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",64439]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);
+            	document.writeln("<style type=\"text/css\">#footTool,.float_container{bottom:50px !important;}</style>");   
+	    }
             else{
                 console.log('Isset live');
             }
