@@ -76,7 +76,7 @@ $.fn.d_contact = function(options) {
                     //loading();
                     var current_ip =  0;//data.ip;
                     $.ajax({
-                        url: 'http://phongkhamngoquyen.com/d_contact/index.php',
+                        url: 'http://contact.phongkhamngoquyen.com/d_contact/index.php',
                         type: 'POST',
                         data: {
                             phone: phone_number,
