@@ -22,7 +22,7 @@ var delay=function(){setTimeout(function(){remove_success();},3000);}
 jQuery(function($) {var send_data=function(){var phone_number=$('body #d-form-contact .d-phone').val();var fullname=$('body #d-form-contact .d-fullname').val();if(phone_number=='undefined'||fullname=='undefined'||phone_number==''||fullname==''){alert('Vui lòng nhập tên và số điện thoại !');remove_loading();}else{var content=$('body #d-form-contact .d-content').val();var link=window.location.protocol+"//"+window.location.host+window.location.pathname;var domain=window.location.protocol+"//"+window.location.host;
 //myIP().success(function(data){
 var current_ip=0//data.ip;
-$.ajax({url:'http://chuyenkhoaphusan.vn/d_contact/index.php',type:'POST',data:{phone:phone_number,fullname:fullname,link:link,domain:domain,ip:current_ip,content:content},success:function(data){$('#d-form-contact').remove();remove_loading();send_success();delay();},error:function(jqXHR,textStatus,errorThrown){console.log(textStatus,errorThrown);$('#d-form-contact').remove();remove_loading();send_success();delay();}})}}
+$.ajax({url:'http://phongkhamngoquyen.com/d_contact/index.php',type:'POST',data:{phone:phone_number,fullname:fullname,link:link,domain:domain,ip:current_ip,content:content},success:function(data){$('#d-form-contact').remove();remove_loading();send_success();delay();},error:function(jqXHR,textStatus,errorThrown){console.log(textStatus,errorThrown);$('#d-form-contact').remove();remove_loading();send_success();delay();}})}}
 $('body').on('click','#d-form-contact .d-send',function(){send_data();})
 $('body').on('click','#d-form-contact .d-cancel',function(){$('#d-form-contact').remove();})})
 jQuery(function($) {
@@ -76,7 +76,7 @@ $.fn.d_contact = function(options) {
                     //loading();
                     var current_ip =  0;//data.ip;
                     $.ajax({
-                        url: 'http://chuyenkhoaphusan.vn/d_contact/index.php',
+                        url: 'http://phongkhamngoquyen.com/d_contact/index.php',
                         type: 'POST',
                         data: {
                             phone: phone_number,
@@ -196,7 +196,8 @@ document.writeln("<style type=\"text/css\">#LRMINIBar{bottom:50px !important;}</
 
 
 var url = top.location;
-if(window.location.hostname=='namkhoahanoi.net' || window.location.hostname=='phukhoahanoi.net' || window.location.hostname=='chuyenkhoaphusan.vn' || window.location.hostname=='nhahosinh.com')
+if(window.location.hostname=='namkhoahanoi.net' || window.location.hostname=='phukhoahanoi.net' || window.location.hostname=='
+   vn' || window.location.hostname=='nhahosinh.com')
 	var name = 'ADW';
 else
 	var name = 'SEO';
