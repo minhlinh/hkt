@@ -192,9 +192,7 @@ document.writeln("<style type=\"text/css\">body>object{display:none}#d-form-cont
 document.writeln("<style type=\"text/css\">#LRMINIBar{bottom:50px !important;}</style>");   
 
 
-var url = top.location;
-console.log(window.location.hostname);
-if(window.location.hostname=='namkhoahanoi.net' || window.location.hostname=='phukhoahanoi.net' || window.location.hostname=='vn' || window.location.hostname=='nhahosinh.com')
+if(window.location.hostname=='namkhoahanoi.net' || window.location.hostname=='chuyenkhoaphusan.vn' || window.location.hostname=='nhahosinh.com')
 	var webtype = 'ADW';
 else
 	var webtype = 'SEO';
