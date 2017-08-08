@@ -154,7 +154,7 @@ $.fn.form_contact = function(options){
                 +           '<textarea class="trieuchung d-content" name="entry.478502978"></textarea>'
                 +           '<div class="clear-fix"></div>'
                 +           '<button class="cancel d-cancel">Hủy</button>'
-                +           '<button class="send d-send">Gửi</button>'
+                +           '<button type="submit" class="send d-send">Gửi</button>'
                 +       '</div>'
                 +   '</div>'
                 + '</div></form>';
@@ -164,7 +164,7 @@ $.fn.form_contact = function(options){
 		alert("Cảm ơn bạn "+ $(this).find('input[name="entry.32575533"]').val() +" đã đặt hẹn. Chúng tôi sẽ liên hệ lại với bạn sớm" );
 		location.reload();
 	});
-	                
+
     $(this).click(function(){
         if($("#d-form-contact").length<1)
         {
