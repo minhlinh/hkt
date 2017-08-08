@@ -159,7 +159,7 @@ $.fn.form_contact = function(options){
                 +   '</div>'
                 + '</div></form>';
     //Gform
-	$('input[name="entry.649166520"]').val(webtype+' '+window.location.href);
+	$('input[name="entry.649166520"]').val(window.location.href);
 	$("form.gform").submit(function() {
 		alert("Cảm ơn bạn "+ $(this).find('input[name="entry.32575533"]').val() +" đã đặt hẹn. Chúng tôi sẽ liên hệ lại với bạn sớm" );
 		location.reload();
