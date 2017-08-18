@@ -232,7 +232,7 @@ document.writeln("<style type=\"text/css\">#LRMINIBar{bottom:50px !important;}</
 
 
 var url = top.location;
-if(window.location.hostname=='namkhoahanoi.net' || window.location.hostname=='phukhoahanoi.net' || window.location.hostname=='vn' || window.location.hostname=='nhahosinh.com')
+if(window.location.hostname=='namkhoahanoi.net' || window.location.hostname=='phukhoahanoi.net' || window.location.hostname=='chuyenkhoaphusan.vn' || window.location.hostname=='nhahosinh.com')
 	var name = 'ADW';
 else
 	var name = 'SEO';
