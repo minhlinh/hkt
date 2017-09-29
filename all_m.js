@@ -1,3 +1,4 @@
+window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",71280]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);
 document.writeln("<script language=\"javascript\" src=\"http://vnlive.dakhoaquocte.com.vn/JS/LsJS.aspx?siteid=KQG86764836&lng=en\"></script>");
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 }
