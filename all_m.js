@@ -255,3 +255,27 @@ document.writeln("<style>@import url(\"http://fonts.googleapis.com/css?family=Mo
             $("#form-dienthoai").show();
         });
     });
+
+    var tv1017 = '<div id="tv1017" style="background: rgba(0, 0, 0, .3);display: flex;align-items: center;width: 100%;height: 100%; position: fixed;">'
+                +   '<div style="background:url(\'http://lib.phongkhamngoquyen.com/m1017.png\') no-repeat center;width:281px;height:85px;display:block;margin:0 auto">'
+                +   '<a style="width:50%;display:inline-block;height:85px" href="javascript:void(0)" class="canel"></a>'
+                +   '<a style="width:50%;display:inline-block;height:85px" href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();return false;" title="Tư vấn online" target="_blank"></a>'
+                +   '</div>'
+                + '</div>';
+
+document.writeln(tv1017);
+
+    jQuery(function($) {
+
+        $("#tv1017 .canel").click(function(){
+            $("#tv1017").hide();
+        });
+
+		setTimeout(function(){
+			s($("#LRMINIBar").css("display")=='block')
+			{
+				$("#tv1017").show('slow');
+			}
+		},20000);
+
+    });
