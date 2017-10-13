@@ -256,12 +256,12 @@ document.writeln("<style>@import url(\"http://fonts.googleapis.com/css?family=Mo
         });
     });
 
-    var tv1017 = '<div id="tv1017" style="background: rgba(0, 0, 0, .3);display: flex;align-items: center;width: 100%;height: 100%; position: fixed;">'
+    var tv1017 = '<div id="tv1017" style="display: none;"><div style="background: rgba(0, 0, 0, .3);display: flex;align-items: center;width: 100vw;height: 100vh; position: fixed;z-index:99999999999"><'
                 +   '<div style="background:url(\'http://lib.phongkhamngoquyen.com/m1017.png\') no-repeat center;width:281px;height:85px;display:block;margin:0 auto">'
                 +   '<a style="width:50%;display:inline-block;height:85px" href="javascript:void(0)" class="canel"></a>'
                 +   '<a style="width:50%;display:inline-block;height:85px" href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();return false;" title="Tư vấn online" target="_blank"></a>'
                 +   '</div>'
-                + '</div>';
+                + '</div></div>';
 
 document.writeln(tv1017);
 
