@@ -272,7 +272,7 @@ document.writeln(tv1017);
         });
 
 		setTimeout(function(){
-			s($("#LRMINIBar").css("display")=='block')
+			if($("#LRMINIBar").css("display")=='block')
 			{
 				$("#tv1017").show('slow');
 			}
