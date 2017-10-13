@@ -271,11 +271,23 @@ document.writeln(tv1017);
             $("#tv1017").hide();
         });
 
-		setTimeout(function(){
-			if($("#LRMINIBar").css("display")=='block')
-			{
-				$("#tv1017").show('slow');
-			}
-		},20000);
+        function show_tv1017(){
+        	console.log('tv1017');
+			setTimeout(function(){
+				if($("#LRMINIBar").css("display")=='block')
+				{
+					$("#tv1017").show('slow');
+				}
+				else{
+					show_tv1017();
+				}
+			},10000);
+        }
+			setTimeout(function(){
+				show_tv1017();
+			},10000);
+
 
     });
+
+
