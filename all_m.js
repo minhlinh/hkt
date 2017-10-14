@@ -275,6 +275,7 @@ function check_isset_live(){
 		setTimeout(function(){
 			check_isset_live();
 		},1000);
+	}
 }
 check_isset_live();
 
