@@ -260,7 +260,7 @@ document.writeln("<style>@import url(\"http://fonts.googleapis.com/css?family=Mo
     var tv1017 = '<div id="tv1017" data-time="1" style="background:url(\'http://lib.phongkhamngoquyen.com/m1017.png\') no-repeat center;width:281px;height:85px;display:none;margin:0 auto;position: fixed;z-index:99999999999;top:45%;left:0;width:100%">'
                 +   '<a style="width:50%;display:inline-block;height:85px" href="javascript:void(0)" class="canel"></a>'
                 +   '<a style="width:50%;display:inline-block;height:85px" href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();return false;" title="Tư vấn online" target="_blank"></a>'
-                +   '</div>';
+                +   '</div><style>@media all and (min-width:768px){#tv1017{display:none !important}}</style>';
 
 document.writeln(tv1017);
 
@@ -311,6 +311,7 @@ check_isset_live();
         }
 
     });
+
 
 
 
