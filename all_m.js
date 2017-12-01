@@ -256,6 +256,5 @@ document.writeln("<style>@import url(\"http://fonts.googleapis.com/css?family=Mo
         });
     });
 
-
-
-
+//QC Zalo bot
+document.writeln("<a href=\"http://zalo.me/0988202233\" target=\"_blank\" class=\"fzm\"><img src=\"http://chuyende.phongkhamngoquyen.com/image_all/zalom.png\" alt=\"img\"></a><style>.fzm{position:fixed;bottom:50px;left: 2px;z-index: 99999}@media screen and (min-width: 500px){.fzm{display:none}}</style>");
