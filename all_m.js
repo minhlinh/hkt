@@ -302,7 +302,7 @@ function show_tv1017(){
 	{
 		var time = 10000;
 	}
-	if($("#tv1017").data('time') == 3)
+	else if($("#tv1017").data('time') == 3)
 	{
 		var time = 15000;
 	}
@@ -310,7 +310,7 @@ function show_tv1017(){
 	{
 		var time = 6000;
 	}
-	console.log('tv1017' + time);    	
+	console.log('tv1017 ' + time);    	
 	setTimeout(function(){
 		if($("#tv1017").data('time') == 2)
 		{
