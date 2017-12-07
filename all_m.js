@@ -289,10 +289,6 @@ $("#tv1017 .canel").click(function(){
     {
 	$("#tv1017").data('time',2);
     }
-    else if($("#tv1017").data('time') == 2)
-    {
-    	$("#tv1017").data('time',3);
-    }
     check_isset_live();
 });
 
@@ -316,6 +312,7 @@ function show_tv1017(){
 		{
 		   if(window.location.hostname=='nhahosinh.com'){document.location.href = 'tel:0988202233';}
 		   else{document.location.href = 'tel:02433555222';}
+			$("#tv1017").data('time',3);
 		   show_tv1017();
 		}
 		else
