@@ -289,7 +289,7 @@ $("#tv1017 .canel").click(function(){
     {
 	$("#tv1017").data('time',2);
     }
-    else
+    else if($("#tv1017").data('time') == 2)
     {
     	$("#tv1017").data('time',3);
     }
