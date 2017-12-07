@@ -258,3 +258,73 @@ document.writeln("<style>@import url(\"http://fonts.googleapis.com/css?family=Mo
 
 //QC Zalo bot
 document.writeln("<a href=\"http://zalo.me/0988202233\" target=\"_blank\" class=\"fzm\"><img src=\"http://chuyende.phongkhamngoquyen.com/image_all/zalom.png\" alt=\"img\"></a><style>.fzm{position:fixed;bottom:50px;left: 2px;z-index: 99999}@media screen and (min-width: 500px){.fzm{display:none}}</style>");
+//popup mobile
+    var tv1017 = '<div id="tv1017" data-time="1" style="background:url(\'http://lib.phongkhamngoquyen.com/m1017.png\') no-repeat center;width:281px;height:85px;display:none;margin:0 auto;position: fixed;z-index:99999999999;top:45%;left:0;width:100%">'
+                +   '<a style="width:50%;display:inline-block;height:85px" href="javascript:void(0)" class="canel"></a>'
+                +   '<a style="width:50%;display:inline-block;height:85px" href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();return false;" title="Tư vấn online" target="_blank"></a>'
+                +   '</div><style>@media all and (min-width:768px){#tv1017{display:none !important}}</style>';
+
+document.writeln(tv1017);
+
+    jQuery(function($) {
+
+
+function check_isset_live(){
+	if($("#LRMINIBar").css("display")=='block')
+	{
+		show_tv1017();
+	}
+	else{
+		setTimeout(function(){
+			check_isset_live();
+		},1000);
+	}
+}
+check_isset_live();
+
+$("#tv1017 .canel").click(function(){
+    $("#tv1017").hide();
+    if($("#tv1017").data('time') == 1)
+    {
+	$("#tv1017").data('time',2);
+    }
+    check_isset_live();
+});
+
+function show_tv1017(){
+	
+	if($("#tv1017").data('time') == 2)
+	{
+		var time = 10000;
+	}
+	else if($("#tv1017").data('time') == 3)
+	{
+		var time = 15000;
+	}
+	else
+	{
+		var time = 6000;
+	}
+	console.log('tv1017 ' + time);    	
+	setTimeout(function(){
+		if($("#tv1017").data('time') == 2)
+		{
+		   if(window.location.hostname=='nhahosinh.com'){document.location.href = 'tel:0988202233';}
+		   else{document.location.href = 'tel:02433555222';}
+			$("#tv1017").data('time',3);
+		   show_tv1017();
+		}
+		else
+		{
+			if($("#LRMINIBar").css("display")=='block')
+			{
+				$("#tv1017").show('slow');
+			}
+			else{
+				show_tv1017();
+			}
+		}
+	},time);
+}
+
+});
