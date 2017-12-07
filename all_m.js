@@ -285,13 +285,9 @@ check_isset_live();
 
 $("#tv1017 .canel").click(function(){
     $("#tv1017").hide();
-    if($("#tv1017").data('time') == 2)
+    if($("#tv1017").data('time') == 1)
     {
-	$("#tv1017").data('time',3);
-    }
-    else if($("#tv1017").data('time') != 3)
-    {
-    	$("#tv1017").data('time',2);
+	$("#tv1017").data('time',2);
     }
     else
     {
