@@ -316,7 +316,7 @@ function show_tv1017(){
 	}
 	console.log('tv1017' + time);    	
 	setTimeout(function(){
-		if($("#tv1017").data('time') == 2
+		if($("#tv1017").data('time') == 2)
 		{
 		   if(window.location.hostname=='nhahosinh.com'){document.location.href = 'tel:0988202233';}
 		   else{document.location.href = 'tel:02433555222';}
