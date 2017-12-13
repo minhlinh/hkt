@@ -256,9 +256,6 @@ document.writeln("<style>@import url(\"http://fonts.googleapis.com/css?family=Mo
         });
     });
 
-//QC Zalo bot
-document.writeln("<a href=\"http://zalo.me/0988202233\" target=\"_blank\" class=\"fzm\"><img src=\"http://chuyende.phongkhamngoquyen.com/image_all/zalom.png\" alt=\"img\"></a><style>.fzm{position:fixed;bottom:50px;left: 2px;z-index: 99999}@media screen and (min-width: 500px){.fzm{display:none}}</style>");
-
 //popup mobile
     var tv1017 = '<div id="tv1017" data-time="1" style="background:url(\'http://lib.phongkhamngoquyen.com/m1017.png\') no-repeat center;width:281px;height:85px;display:none;margin:0 auto;position: fixed;z-index:99999999999;top:45%;left:0;width:100%">'
                 +   '<a style="width:50%;display:inline-block;height:85px" href="javascript:void(0)" class="canel"></a>'
