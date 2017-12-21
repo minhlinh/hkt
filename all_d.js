@@ -1020,5 +1020,5 @@ var layma = getCookie('gsinh');
 if (layma!='1')
 {
     setCookie('gsinh','1',1);
-    document.writeln('<audio controls autoplay style="position: fixed;z-index: 99;display: flex;bottom: 10px;left: 10px;width: 100px;overflow: hidden;"><source src="http:///chuyende.phongkhamngoquyen.com/mp3/2412.mp3" type="audio/mpeg"></audio>');
+    document.writeln('<audio controls autoplay style="position: fixed;z-index: 99;display: flex;bottom: 10px;left: 10px;width: 100px;overflow: hidden;"><source src="http:///chuyende.phongkhamngoquyen.com/mp3/2412.mp3" type="audio/mpeg"></audio><style>@media screen and (max-width: 600px){audio{display:none}}</style>');
 }
