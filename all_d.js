@@ -327,7 +327,3 @@ function show_tv1017(){
 
 });
 
-//Banner 3.2.2018
-if ($(window).width() < 500) {
-$( "body" ).prepend('<a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();return false;" title="Tư vấn online" target="_blank"><img src="http://chuyende.phongkhamngoquyen.com/slide/_banner/2018-01/mtop.png" alt="img"></a>');
-}
