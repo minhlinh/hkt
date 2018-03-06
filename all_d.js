@@ -293,27 +293,14 @@ function show_tv1017(){
 	
 	if($("#tv1017").data('time') == 2)
 	{
-		var time = 10000;
-	}
-	else if($("#tv1017").data('time') == 3)
-	{
 		var time = 15000;
 	}
 	else
 	{
-		var time = 6000;
+		var time = 30000;
 	}
 	console.log('tv1017 ' + time);    	
 	setTimeout(function(){
-		if($("#tv1017").data('time') == 2)
-		{
-		   if(window.location.hostname=='nhahosinh.com'){document.location.href = 'tel:0988202233';}
-		   else{document.location.href = 'tel:02433555222';}
-			$("#tv1017").data('time',3);
-		   show_tv1017();
-		}
-		else
-		{
 			if($("#LRMINIBar").css("display")=='block')
 			{
 				$("#tv1017").show('slow');
@@ -321,7 +308,6 @@ function show_tv1017(){
 			else{
 				show_tv1017();
 			}
-		}
 	},time);
 }
 
