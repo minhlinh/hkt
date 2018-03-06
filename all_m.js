@@ -292,7 +292,7 @@ $("#tv1017 .canel").click(function(){
 function show_tv1017(){
 	if($("#tv1017").data('time')<4)
 	{
-		if($("#tv1017").data('time') == 2)
+		if($("#tv1017").data('time') == 1)
 		{
 			var time = 15000;
 		}
