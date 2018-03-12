@@ -284,7 +284,9 @@ $("#tv1017 .canel").click(function(){
     $("#tv1017").hide('slow');
     $("#fp-phoneIcon").show('slow');
 	
-$( "#fp-phoneIcon" ).attr( "style", "display: block !important;" );
+setTimeout(function(){
+						$( "#fp-phoneIcon" ).attr( "style", "display: block !important;" );
+					},600);
 	
     if($("#tv1017").data('time') == 1)
     {
@@ -314,7 +316,7 @@ function show_tv1017(){
 					
 					setTimeout(function(){
 						$( "#fp-phoneIcon" ).attr( "style", "display: none !important;" );
-					},1000);
+					},600);
 					
 					setTimeout(function(){
 						$("#tv1017 .canel").click();
