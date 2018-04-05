@@ -336,15 +336,20 @@ document.writeln('<div class="ovlp" data-time="1"><span class="close" onclick="C
   		$( '.ovlp' ).data('time',$( '.ovlp' ).data('time')+1);
   		//console.log( $('.ovlp').data('time') );
  	}
- 	setTimeout(OpenLayer, 6000);
+ 	setTimeout(OpenLayer, 10000);
 
  	function CloseLayer(){
       	$(".ovlp,.pun").slideUp("slow");
   		var $time = $('.ovlp').data('time');
   		if( $time === 2 ){
-  			setTimeout(OpenLayer, 15000);
+  			setTimeout(OpenLayer, 20000);
   			$( '.ovlp' ).data('time',$( '.ovlp' ).data('time')+1);
   		}else if( $time > 2 ){
-  			setTimeout(OpenLayer, 30000);
+  			setTimeout(OpenLayer, 40000);
   		}
   	}
+     var dong = setTimeout (CloseLayer,5000);
+    jQuery(".fp input").focus(function(event) {
+        clearTimeout( dong );
+    })
+
