@@ -256,7 +256,7 @@ document.writeln("<style>@import url(\"http://fonts.googleapis.com/css?family=Mo
         });
     });
 
-/*/popup mobile
+//popup mobile
     var tv1017 = '<div id="tv1017" data-time="1" style="background:url(\'http://lib.phongkhamngoquyen.com/m1017.png\') no-repeat center;width:281px;height:85px;display:none;margin:0 auto;position: fixed;z-index:2147483646;top:45%;left:0;width:100%">'
                 +   '<a style="width:50%;display:inline-block;height:85px" href="javascript:void(0)" class="canel"></a>'
                 +   '<a style="width:50%;display:inline-block;height:85px" href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();return false;" title="Tư vấn online" target="_blank"></a>'
@@ -323,7 +323,7 @@ function show_tv1017(){
 	}
 }
 });
-*/
+/*
 if(window.location.hostname=='nhahosinh.com')
 	var face = 'http://Fb.com/trungtamytehoankiem';
 else
@@ -351,4 +351,4 @@ function CloseLayer(){
         setTimeout (CloseLayer,5000);
 
     }
-    setTimeout(OpenLayer, 10000);
+    setTimeout(OpenLayer, 10000);*/
