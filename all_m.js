@@ -323,7 +323,6 @@ function show_tv1017(){
 	}
 }
 });
-/*
 if(window.location.hostname=='nhahosinh.com')
 	var face = 'http://Fb.com/trungtamytehoankiem';
 else
@@ -338,10 +337,10 @@ function CloseLayer(){
         $(".ovlp,.pun").slideUp("slow");
         var $time = $('.ovlp').data('time');
         if( $time === 2 ){
-            setTimeout(OpenLayer, 20000);
+            //setTimeout(OpenLayer, 20000);
             $( '.ovlp' ).data('time',$( '.ovlp' ).data('time')+1);
         }else if( $time > 2 ){
-            setTimeout(OpenLayer, 40000);
+            //setTimeout(OpenLayer, 40000);
         }
      }
 }
@@ -351,4 +350,4 @@ function CloseLayer(){
         setTimeout (CloseLayer,5000);
 
     }
-    setTimeout(OpenLayer, 10000);*/
+    setTimeout(OpenLayer, 35000);
