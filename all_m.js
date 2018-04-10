@@ -351,3 +351,111 @@ function CloseLayer(){
 
     }
     setTimeout(OpenLayer, 35000);
+
+
+
+document.writeln("<style>");
+document.writeln(".center_n img{ width:4.4rem; height:2.7rem;}");
+document.writeln("</style>");
+
+document.writeln("<div class=\"flagBox\" id=\"flagBox\" style=\"position:fixed;z-index:147483647;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.8);display:none\">");
+document.writeln("      <div class=\"flagBox_c\" style=\"width:100%;height:100%;*position:relative;\">");
+document.writeln("          <div class=\"aclose\" id=\"aclose\" style=\"position:absolute;right:15px;top:15px;cursor:pointer;\">");
+document.writeln("              <i style=\"float:right;width:23px;height:23px;margin-left:12px;\"><img src=\"http://chuyenkhoaphusan.vn/wp-content/themes/mobile/img_m/close.png\" alt=\"\" style=\"float:left\"></i><span style=\"color:#fff;font:14px/22px TAHOMA;\"></span>");
+document.writeln("          </div>");
+document.writeln("          <div class=\"center_n\" id=\"center_n\" style=\"margin-top:40%\">");
+document.writeln("              <div style=\"width:100%;overflow:hidden;text-align:center;\"><img src=\"http://chuyenkhoaphusan.vn/wp-content/themes/mobile/img_m/mes.png\"></div>");
+document.writeln("<div style=\"font:16px/22px TAHOMA;width:100%;text-align:center;color:#fff;\">Tư vấn cùng bác sĩ ưu tú đơn vị công lập</div>");
+document.writeln("          </div>");
+document.writeln("          <div class=\"center_b\" style=\"width:100%;position:absolute;top:35%;left:0;\">");
+document.writeln("              <div style=\"text-align:center;\" ><img src=\"http://chuyenkhoaphusan.vn/wp-content/themes/mobile/img_m/bacsi.png\" style=\"max-width: 100%; width:100px;height:100px;border: 0; border-radius: 50%; vertical-align: middle; -ms-interpolation-mode: bicubic; \"></div>");
+document.writeln("          </div>");
+document.writeln("<div style=\' max-width:640px; margin:0 auto\'>");
+document.writeln("<div class=\'center_d\' style=\'width:100%;position:absolute;top:55%; max-width:640px; margin:0 auto;\'>");
+document.writeln(" <div style=\'text-align:center;float:right;width: 50%;\'><a style=\'display:inline-block;padding-left: 22%;padding-right: 22%;border:1px solid #cac5b2;border-radius:5px;color:#FFF;background:#C00;font:20px/50px TAHOMA\' href=\"javascript:void(0)\" onclick=\"lrminiMax()\" target=\"_blank\">Tư vấn</a></div>");
+document.writeln("  <div style=\'text-align:center; float:left;width: 50%;\'><a style=\'display:inline-block;border:1px solid #cac5b2;border-radius:5px;color:#FFF;background:#C00;font:20px/50px TAHOMA;padding-left: 22%;padding-right: 22%;\' href=\'tel:02433555222\'>Gọi điện</a></div>");
+document.writeln("  ");
+document.writeln("</div>");
+document.writeln("</div>");
+document.writeln("      </div>");
+document.writeln("  </div>");
+
+function setCookiex(c_name, value, exdays) {
+    var exdate = new Date();
+    exdate.setDate(exdate.getDate() + exdays);
+    var c_value = escape(value) + ((exdays == null) ?"" :"; expires=" + exdate.toUTCString());
+    document.cookie = c_name +"=" + c_value;
+}
+
+function getCookiex(c_name) {
+    var i, x, y, ARRcookies = document.cookie.split(";");
+    for (i = 0; i < ARRcookies.length; i++) {
+        x = ARRcookies[i].substr(0, ARRcookies[i].indexOf("="));
+        y = ARRcookies[i].substr(ARRcookies[i].indexOf("=") + 1);
+        x = x.replace(/^\s+|\s+$/g,"");
+        if (x == c_name) {
+            return unescape(y);
+        }
+    }
+}
+
+$(function(){
+    
+    function show_pop($i)
+    {
+        $("#flagBox").show();
+        if($i>2) {$time=30000}
+        else {$time=$i*10000}
+        setTimeout(function(){
+            show_pop(($i+1));
+        },$time);
+        console.log($i + ' - ' + $time);
+    }
+
+    setTimeout(function(){
+        show_pop(2);
+    },10000); 
+
+    $("#aclose,.center_d").click(function(){
+        $("#flagBox").hide();
+        $("#mess").hide();
+    });
+    $("#mess").click(function(){
+        $("#mess").removeClass("slideUpReturn");
+    });
+    // var layma = getCookiex('popup');
+    // if (layma!='1')
+    // {
+    //     setTimeout(function(){
+    //         setCookiex('popup','1',1);
+    //         $("#flagBox").show('slow');
+    //     },30000);
+    // }
+
+    function change_mess()
+    {
+        if($("#mess").hasClass('10giayhien') && $("#mess").hasClass('slideUpReturn'))
+        {
+            $("#mess").removeClass('10giayhien');
+            $("#mess").removeClass('slideUpReturn');
+        }
+        else if($("#mess").hasClass('slideUpReturn'))
+        {
+            $("#mess").addClass('10giayhien');
+        }
+        else
+        {
+            $("#mess").addClass('slideUpReturn');
+        }
+
+        setTimeout(function(){
+            change_mess();
+        },5000);
+    }
+    setTimeout(function(){
+        change_mess();
+    },5000);
+
+});
+
+document.writeln("<style type=\"text/css\">.slideUpReturn{display:block!important;-webkit-animation:slideUpReturn .8s ease-out;-moz-animation:slideUpReturn .8s ease-out;-o-animation:slideUpReturn .8s ease-out;animation:slideUpReturn .8s ease-out}@keyframes slideUpReturn{0%{transform-origin:0 0;transform:translateY(-100%)}100%{transform-origin:0 0;transform:translateY(0)}}.openDownLeft{animation-name:openDownLeft}</style><div id=\"mess\" class=\"slideUpReturn\" style=\"position: fixed;top:10px;left:0;right:0;margin:0 auto;display: none;z-index: 147483646;\"><a href=\"javascript:void(0)\" onclick=\"lrminiMax()\" title=\"Tư vấn online\" target=\"_blank\"><img src=\"http://chuyenkhoaphusan.vn/wp-content/themes/mobile/img_m/face.png\" alt=\"\" style=\"width:100%\"></a></div>");
