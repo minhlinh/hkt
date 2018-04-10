@@ -347,7 +347,7 @@ function CloseLayer(){
     function OpenLayer(){
         $(".ovlp,.pun").slideDown("slow");
         $( '.ovlp' ).data('time',$( '.ovlp' ).data('time')+1);
-        setTimeout (CloseLayer,5000);
+        setTimeout (CloseLayer,10000);
 
     }
     setTimeout(OpenLayer, 35000);
