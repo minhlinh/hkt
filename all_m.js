@@ -1,20 +1,3 @@
-Skip to content
-This repository
-Search
-Pull requests
-Issues
-Marketplace
-Explore
- @minhlinh
-Sign out
-1
-0 0 minhlinh/hkt
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Insights  Settings
-hkt/all_m.js
-462b6b5  18 days ago
-@minhlinh minhlinh Update all_m.js
-     
-389 lines (353 sloc)  142 KB
 //window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",71280]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);
 document.writeln("<script language=\"javascript\" src=\"http://vnlive.dakhoaquocte.com.vn/JS/LsJS.aspx?siteid=KQG86764836&lng=en\"></script>");
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
@@ -402,7 +385,7 @@ $(function(){
     }
     setTimeout(function(){
         change_mess();
-    },5000); 
+    },5000);
 });
 document.writeln("<style type=\"text/css\">.slideUpReturn{display:block!important;-webkit-animation:slideUpReturn .8s ease-out;-moz-animation:slideUpReturn .8s ease-out;-o-animation:slideUpReturn .8s ease-out;animation:slideUpReturn .8s ease-out}@keyframes slideUpReturn{0%{transform-origin:0 0;transform:translateY(-100%)}100%{transform-origin:0 0;transform:translateY(0)}}.openDownLeft{animation-name:openDownLeft}</style><div id=\"mess\" class=\"slideUpReturn\" style=\"position: fixed;top:50px;left:0;right:0;margin:0 auto;display: none;z-index: 9999999999;\"><a href=\"javascript:void(0)\" onclick=\"lrminiMax()\" title=\"Tư vấn online\" target=\"_blank\"><img src=\"http://chuyenkhoaphusan.vn/wp-content/themes/mobile/img_m/face.png\" alt=\"\" style=\"width:100%\"></a></div>");*/
 © 2018 GitHub, Inc.
