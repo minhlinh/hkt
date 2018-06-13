@@ -34,7 +34,7 @@ var send_data = function() {
         var content = $('body #d-form-contact .d-content').val();
 
         var time = $('body #d-form-contact .d-time').val();
-	    if (time != 'undefined' && time != '') {
+	    if (time !== undefined && time != 'undefined' && time != '') {
 	        content= 'Hẹn khám ngày '+time+'. '+content;
 	    }
 
@@ -119,7 +119,7 @@ $.fn.d_contact = function(options) {
                     //var current_ip =  0;//data.ip;
                     var content = that.find('.d-content').val();
 			        var time = that.find('.d-time').val();
-				    if (time != 'undefined' && time != '') {
+				    if (time !== undefined && time != 'undefined' && time != '') {
 				        content= 'Hẹn khám ngày '+time+'. '+content;
 				    }                    
                     $.ajax({
