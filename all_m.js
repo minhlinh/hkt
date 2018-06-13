@@ -192,7 +192,7 @@ $.fn.form_contact = function(options){
                 +           '<label>Số điện thoại</label>'
                 +           '<input type="text" class="d-phone" placeholder="Thông tin bắt buộc">'
                 +           '<div class="clear-fix"></div>'
-                +           '<label>Ngày hẹn khám</label>'
+                +           '<label>Ngày hẹn</label>'
                 +           '<input type="date" class="d-time">'
                 +           '<div class="clear-fix"></div>'
                 +           '<label>Địa chỉ</label>'
