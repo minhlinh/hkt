@@ -1,4 +1,3 @@
-//window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",71280]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);
 document.writeln("<script language=\"javascript\" src=\"http://vnlive.dakhoaquocte.com.vn/JS/LsJS.aspx?siteid=KQG86764836&lng=en\"></script>");
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
 }
@@ -27,11 +26,18 @@ jQuery(function($) {
 var send_data = function() {
     var phone_number = $('body #d-form-contact .d-phone').val();
     var fullname = $('body #d-form-contact .d-fullname').val();
+    
     if (phone_number == 'undefined' || fullname == 'undefined' || phone_number == '' || fullname == '') {
         alert('Vui lòng nhập tên và số điện thoại !');
         remove_loading();
-    } else {
+    } else {    	
         var content = $('body #d-form-contact .d-content').val();
+
+        var time = $('body #d-form-contact .d-time').val();
+	    if (time != 'undefined' && time != '') {
+	        content= 'Hẹn khám ngày '+time+'. '+content;
+	    }
+
         $.ajax({
             url: 'http://crm.36ngoquyen.vn/admin/contact/form_post.php',
             type: 'POST',
@@ -103,7 +109,7 @@ $.fn.d_contact = function(options) {
             }, 1000);
             var phone_number = that.find('.d-phone').val();
             var fullname = that.find('.d-fullname').val();
-            var info = that.find('.d-content').val();
+            
             if (phone_number == 'undefined' || fullname == 'undefined' || phone_number == '' || fullname == '') {
                 alert('Vui lòng nhập tên và số điện thoại !');
                 remove_loading();
@@ -111,13 +117,18 @@ $.fn.d_contact = function(options) {
                 //myIP().success(function(data) {
                     //loading();
                     //var current_ip =  0;//data.ip;
+                    var content = that.find('.d-content').val();
+			        var time = that.find('.d-time').val();
+				    if (time != 'undefined' && time != '') {
+				        content= 'Hẹn khám ngày '+time+'. '+content;
+				    }                    
                     $.ajax({
                         url: 'http://crm.36ngoquyen.vn/admin/contact/form_post.php',
                         type: 'POST',
                         data: {
                             name: fullname,
                             phone: phone_number,
-                            info: info,
+                            info: content,
                             source: window.location.href
                         },
                         success: function(data) {
@@ -181,8 +192,8 @@ $.fn.form_contact = function(options){
                 +           '<label>Số điện thoại</label>'
                 +           '<input type="text" class="d-phone" placeholder="Thông tin bắt buộc">'
                 +           '<div class="clear-fix"></div>'
-                +           '<label>Email</label>'
-                +           '<input type="text" class="email">'
+                +           '<label>Ngày hẹn khám</label>'
+                +           '<input type="date" class="d-time">'
                 +           '<div class="clear-fix"></div>'
                 +           '<label>Địa chỉ</label>'
                 +           '<input type="text" class="address">'
@@ -213,14 +224,11 @@ $.fn.form_contact = function(options){
         setTimeout(function(){
             if($("#LRdiv2").length<1)
             {
-                console.log('Add subiz');
-    		//window._sbzq||function(e){e._sbzq=[];var t=e._sbzq;t.push(["_setAccount",64935]);var n=e.location.protocol=="https:"?"https:":"http:";var r=document.createElement("script");r.type="text/javascript";r.async=true;r.src=n+"//static.subiz.com/public/js/loader.js";var i=document.getElementsByTagName("script")[0];i.parentNode.insertBefore(r,i)}(window);
-		//document.writeln("<style type=\"text/css\">#footTool,.float_container{bottom:50px !important;}</style>");   
-	    }
+                console.log('Add subiz');   
+	    	}
             else{
                 console.log('Isset live');
             }
-
         },20000);
 
         
@@ -290,6 +298,7 @@ setTimeout(function(){
     }
     check_isset_live();
 });
+var tv1017;
 function show_tv1017(){
 	if($("#tv1017").data('time')<4)
 	{
@@ -301,8 +310,9 @@ function show_tv1017(){
 		{
 			var time = 30000;
 		}
-		console.log('tv1017 ' + time);    	
-		setTimeout(function(){
+		console.log('tv1017 ' + time);
+		clearTimeout(tv1017);
+		tv1017 = setTimeout(function(){
 				if($("#LRMINIBar").css("display")=='block')
 				{
 					$("#tv1017").data('time',3);
