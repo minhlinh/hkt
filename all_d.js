@@ -33,6 +33,11 @@ var send_data = function() {
         remove_loading();
     } else {
         var content = $('body #d-form-contact .d-content').val();
+
+        var time = $('body #d-form-contact .d-time').val();
+	    if (time != 'undefined' && time != '') {
+	        content= 'Hẹn khám ngày '+time+'. '+content;
+	    }
         $.ajax({
             url: 'http://crm.36ngoquyen.vn/admin/contact/form_post.php',
             type: 'POST',
@@ -104,21 +109,22 @@ $.fn.d_contact = function(options) {
             }, 1000);
             var phone_number = that.find('.d-phone').val();
             var fullname = that.find('.d-fullname').val();
-            var info = that.find('.d-content').val();
             if (phone_number == 'undefined' || fullname == 'undefined' || phone_number == '' || fullname == '') {
                 alert('Vui lòng nhập tên và số điện thoại !');
                 remove_loading();
             } else {
-                //myIP().success(function(data) {
-                    //loading();
-                    //var current_ip =  0;//data.ip;
+                    var content = that.find('.d-content').val();
+			        var time = that.find('.d-time').val();
+				    if (time != 'undefined' && time != '') {
+				        content= 'Hẹn khám ngày '+time+'. '+content;
+				    }     
                     $.ajax({
                         url: 'http://crm.36ngoquyen.vn/admin/contact/form_post.php',
                         type: 'POST',
                         data: {
                             name: fullname,
                             phone: phone_number,
-                            info: info,
+                            info: content,
                             source: window.location.href
                         },
                         success: function(data) {
@@ -182,8 +188,8 @@ $.fn.form_contact = function(options){
                 +           '<label>Số điện thoại</label>'
                 +           '<input type="text" class="d-phone" placeholder="Thông tin bắt buộc">'
                 +           '<div class="clear-fix"></div>'
-                +           '<label>Email</label>'
-                +           '<input type="text" class="email">'
+                +           '<label>Ngày hẹn</label>'
+                +           '<input type="date" class="d-time">'
                 +           '<div class="clear-fix"></div>'
                 +           '<label>Địa chỉ</label>'
                 +           '<input type="text" class="address">'
@@ -332,7 +338,7 @@ function show_tv1017(){
 }
 
 //Banner 3.2.2018
-if ($(window).width() < 500) {
-$( "body" ).prepend('<a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();return false;" title="Tư vấn online" target="_blank"><img src="http://chuyende.phongkhamngoquyen.com/slide/_banner/2018-01/m'+window.location.hostname+'.png" alt="img"></a>');
-}
-});
+// if ($(window).width() < 500) {
+// $( "body" ).prepend('<a href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();return false;" title="Tư vấn online" target="_blank"><img src="http://chuyende.phongkhamngoquyen.com/slide/_banner/2018-01/m'+window.location.hostname+'.png" alt="img"></a>');
+// }
+// });
