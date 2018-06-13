@@ -303,6 +303,7 @@ setTimeout(function(){
     check_isset_live();
 });
 
+var tv1017;
 function show_tv1017(){
 	if($("#tv1017").data('time')<4)
 	{
@@ -314,8 +315,9 @@ function show_tv1017(){
 		{
 			var time = 30000;
 		}
-		console.log('tv1017 ' + time);    	
-		setTimeout(function(){
+		console.log('tv1017 ' + time);
+		clearTimeout(tv1017);
+		tv1017 = setTimeout(function(){
 				if($("#LRMINIBar").css("display")=='block')
 				{
 					$("#tv1017").data('time',3);
