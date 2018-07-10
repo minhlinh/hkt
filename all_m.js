@@ -37,7 +37,6 @@ var send_data = function() {
 	    if (time !== undefined && time != 'undefined' && time != '') {
 	        content= 'Hẹn khám ngày '+time+'. '+content;
 	    }
-setTimeout(function(){
         $.ajax({
             url: 'http://crm.36ngoquyen.vn/admin/contact/form_post.php',
             type: 'POST',
@@ -61,7 +60,6 @@ setTimeout(function(){
                 $("#d-form-contact").hide();
             }
         });
-},1000);
 
 
     }
@@ -122,8 +120,8 @@ $.fn.d_contact = function(options) {
 			        var time = that.find('.d-time').val();
 				    if (time !== undefined && time != 'undefined' && time != '') {
 				        content= 'Hẹn khám ngày '+time+'. '+content;
-				    }                    
-                    setTimeout(function(){
+				    }         
+		    
 			    $.ajax({
 				url: 'http://crm.36ngoquyen.vn/admin/contact/form_post.php',
 				type: 'POST',
@@ -147,7 +145,6 @@ $.fn.d_contact = function(options) {
 				    $("#d-form-contact").hide();
 				}
 			    });
-		    },1000);
                 //})
             }
         } else {
