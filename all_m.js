@@ -37,7 +37,7 @@ var send_data = function() {
 	    if (time !== undefined && time != 'undefined' && time != '') {
 	        content= 'Hẹn khám ngày '+time+'. '+content;
 	    }
-
+setTimeout(function(){
         $.ajax({
             url: 'http://crm.36ngoquyen.vn/admin/contact/form_post.php',
             type: 'POST',
@@ -60,7 +60,8 @@ var send_data = function() {
                 delay();
                 $("#d-form-contact").hide();
             }
-        })
+        });
+},1000);
 
 
     }
@@ -122,29 +123,31 @@ $.fn.d_contact = function(options) {
 				    if (time !== undefined && time != 'undefined' && time != '') {
 				        content= 'Hẹn khám ngày '+time+'. '+content;
 				    }                    
-                    $.ajax({
-                        url: 'http://crm.36ngoquyen.vn/admin/contact/form_post.php',
-                        type: 'POST',
-                        data: {
-                            name: fullname,
-                            phone: phone_number,
-                            info: content,
-                            source: window.location.href
-                        },
-                        success: function(data) {
-                            remove_loading();
-                            send_success();
-                            delay();
-                            $("#d-form-contact").hide();
-                        },
-                        error: function(jqXHR, textStatus, errorThrown) {
-                            //console.log(textStatus, errorThrown);
-                            remove_loading();
-                            send_success();
-                            delay();
-                            $("#d-form-contact").hide();
-                        }
-                    })
+                    setTimeout(function(){
+			    $.ajax({
+				url: 'http://crm.36ngoquyen.vn/admin/contact/form_post.php',
+				type: 'POST',
+				data: {
+				    name: fullname,
+				    phone: phone_number,
+				    info: content,
+				    source: window.location.href
+				},
+				success: function(data) {
+				    remove_loading();
+				    send_success();
+				    delay();
+				    $("#d-form-contact").hide();
+				},
+				error: function(jqXHR, textStatus, errorThrown) {
+				    //console.log(textStatus, errorThrown);
+				    remove_loading();
+				    send_success();
+				    delay();
+				    $("#d-form-contact").hide();
+				}
+			    });
+		    },1000);
                 //})
             }
         } else {
