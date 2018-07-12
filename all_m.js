@@ -345,7 +345,7 @@ else{
 
 	function CloseLayer(){
 	    if (jQuery(".fp input").is(":focus")){
-		jQuery( '.ovlp' ).data('time',$( '.ovlp' ).data('time')+1);
+		jQuery( '.ovlp' ).data('time',jQuery( '.ovlp' ).data('time')+1);
 	    }
 	    else
 	    {
@@ -353,7 +353,7 @@ else{
 			var $time = jQuery('.ovlp').data('time');
 			if( $time === 2 ){
 			    //setTimeout(OpenLayer, 20000);
-			    $( '.ovlp' ).data('time',$( '.ovlp' ).data('time')+1);
+			    jQuery( '.ovlp' ).data('time',jQuery( '.ovlp' ).data('time')+1);
 			}else if( $time > 2 ){
 			    //setTimeout(OpenLayer, 40000);
 			}
@@ -368,7 +368,7 @@ else{
 
 	function OpenLayer(){
 		jQuery(".ovlp,.pun").slideDown("slow");
-		jQuery( '.ovlp' ).data('time',$( '.ovlp' ).data('time')+1);
+		jQuery( '.ovlp' ).data('time',jQuery( '.ovlp' ).data('time')+1);
 		if(window.location.hostname!='chuyenkhoaphusan.vn')
 		{
 			setTimeout (CloseLayer,10000);
