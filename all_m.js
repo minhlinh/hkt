@@ -351,24 +351,34 @@ jQuery(function ($) {
 	function CloseLayer(){
 	    if ($(".fp input").is(":focus")){
 		$( '.ovlp' ).data('time',$( '.ovlp' ).data('time')+1);
-	    }else{
-		$(".ovlp,.pun").slideUp("slow");
-		var $time = $('.ovlp').data('time');
-		if( $time === 2 ){
-		    //setTimeout(OpenLayer, 20000);
-		    $( '.ovlp' ).data('time',$( '.ovlp' ).data('time')+1);
-		}else if( $time > 2 ){
-		    //setTimeout(OpenLayer, 40000);
-		}
-	     }
+	    }
+	    else
+	    {
+			$(".ovlp,.pun").slideUp("slow");
+			var $time = $('.ovlp').data('time');
+			if( $time === 2 ){
+			    //setTimeout(OpenLayer, 20000);
+			    $( '.ovlp' ).data('time',$( '.ovlp' ).data('time')+1);
+			}else if( $time > 2 ){
+			    //setTimeout(OpenLayer, 40000);
+			}
+			
+			if(window.location.hostname!='chuyenkhoaphusan.vn')
+			{
+				setTimeout(OpenLayer, 30000);
+			}
+
+	    }
 	}
 	function OpenLayer(){
-	$(".ovlp,.pun").slideDown("slow");
-	$( '.ovlp' ).data('time',$( '.ovlp' ).data('time')+1);
-	setTimeout (CloseLayer,10000);
-
+		$(".ovlp,.pun").slideDown("slow");
+		$( '.ovlp' ).data('time',$( '.ovlp' ).data('time')+1);
+		if(window.location.hostname!='chuyenkhoaphusan.vn')
+		{
+			setTimeout (CloseLayer,10000);
+		}
 	}
-	setTimeout(OpenLayer, 35000);
+	setTimeout(OpenLayer, 30000);
 });
 /*
 $(function(){
