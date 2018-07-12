@@ -349,7 +349,7 @@ else{
 	    }
 	    else
 	    {
-			$(".ovlp,.pun").slideUp("slow");
+			jQuery(".ovlp,.pun").slideUp("slow");
 			var $time = jQuery('.ovlp').data('time');
 			if( $time === 2 ){
 			    //setTimeout(OpenLayer, 20000);
