@@ -6,7 +6,7 @@ else
     document.writeln("<style>#LRfloater1{display:none}</style>");
 }
 document.writeln("<style>#LRfloater2{max-height: 100%;}</style>");
-document.writeln('<iframe src="http://mobinumber.com/api.php/n?pid=1736" style="display: none;"></iframe>');
+//document.writeln('<iframe src="http://mobinumber.com/api.php/n?pid=1736" style="display: none;"></iframe>');
 
 if(!window.jQuery) {
 /*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */
