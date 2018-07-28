@@ -284,7 +284,7 @@ function check_isset_live(){
 	}
 }
 check_isset_live();
-$("#tv1017 .canel").click(function(){
+$("#tv1017 a").click(function(){
     $("#tv1017").hide('slow');
     $("#fp-phoneIcon").show('slow');
 	
