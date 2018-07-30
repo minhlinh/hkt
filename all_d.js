@@ -340,7 +340,7 @@ function show_tv1017(){
 
 
 					$("#tv1017").show('slow');
-					$("#fp-phoneIcon").hide('slow',);
+					$("#fp-phoneIcon").hide('slow');
 					
 					setTimeout(function(){
 						$( "#fp-phoneIcon" ).attr( "style", "display: none !important;" );
