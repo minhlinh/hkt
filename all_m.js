@@ -267,7 +267,7 @@ document.writeln("<style>@import url(\"http://fonts.googleapis.com/css?family=Mo
 
 //popup mobile
     var tv1017 = '<div id="tv1017" data-time="1" style="background:url(\'http://lib.phongkhamngoquyen.com/popbs-hot.gif\') no-repeat center;width:323px;height:182px;display:none;margin:0 auto;position: fixed;z-index:2147483646;top:25%;left:0;right:0;">'
-                +   '<a style="padding-right: 0;left: auto;position: fixed;color: #e9182a;font-family: \'utmerm\',serif;font-size: 32px;background: #999;border-radius: 100px;top: 30px;right: 30px;height: 40px;width: 40px;text-align: center;display: inline-block;line-height: 1;position:absolute;top: 10px;right: -10px;" href="javascript:void()">x</a>'
+                +   '<a style="padding-right: 0;left: auto;position: fixed;color: #e9182a;font-family: \'utmerm\',serif;font-size: 32px;background: rgba(153, 153, 153, .6);border-radius: 100px;top: 30px;right: 30px;height: 40px;width: 40px;text-align: center;display: inline-block;line-height: 1;position:absolute;top: 10px;right: -10px;" href="javascript:void(0)">x</a>'
                 +   '<a style="width:210px;display:inline-block;height:182px" href="tel:02433555222" class="canelx"></a>'
                 +   '<a style="width:105px;display:inline-block;height:182px" href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();return false;" title="Tư vấn online" target="_blank"></a>'
                 +   '</div><style>@media all and (min-width:768px){#tv1017{display:none !important}}</style>';
