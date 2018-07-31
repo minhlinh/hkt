@@ -266,13 +266,14 @@ document.writeln("<style>@import url(\"http://fonts.googleapis.com/css?family=Mo
     });
 
 //popup mobile
-    var tv1017 = '<div id="tv1017" data-time="1" style="background:url(\'http://lib.phongkhamngoquyen.com/popbs-hot.gif\') no-repeat center;width:323px;height:182px;display:none;margin:0 auto;position: fixed;z-index:2147483646;top:25%;left:0;right:0;">'
-                +   '<a style="padding-right: 0;left: auto;position: fixed;color: #e9182a;font-family: \'utmerm\',serif;font-size: 32px;background: rgba(153, 153, 153, .6);border-radius: 100px;top: 30px;right: 30px;height: 40px;width: 40px;text-align: center;display: inline-block;line-height: 1;position:absolute;top: 10px;right: -10px;" href="javascript:void(0)">x</a>'
-                +   '<a style="width:210px;display:inline-block;height:182px" href="tel:02433555222" class="canelx"></a>'
-                +   '<a style="width:105px;display:inline-block;height:182px" href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();return false;" title="Tư vấn online" target="_blank"></a>'
+    var tv1017 = '<div id="tv1017" data-time="1" style="background:url(\'http://lib.phongkhamngoquyen.com/m1017.png\') no-repeat center;width:281px;height:85px;display:none;margin:0 auto;position: fixed;z-index:99999999999;top:45%;left:0;width:100%">'
+                +   '<a style="width:50%;display:inline-block;height:85px" href="javascript:void(0)" class="canel"></a>'
+                +   '<a style="width:50%;display:inline-block;height:85px" href="javascript:void(0)" onclick="openZoosUrl();LR_HideInvite();return false;" title="Tư vấn online" target="_blank"></a>'
                 +   '</div><style>@media all and (min-width:768px){#tv1017{display:none !important}}</style>';
+
 document.writeln(tv1017);
-    jQuery(function($) {
+
+jQuery(function($) {
 function check_isset_live(){
 	if($("#LRMINIBar").css("display")=='block')
 	{
@@ -285,19 +286,22 @@ function check_isset_live(){
 	}
 }
 check_isset_live();
-$("#tv1017 a").click(function(){
+
+$("#tv1017 .canel").click(function(){
     $("#tv1017").hide('slow');
     $("#fp-phoneIcon").show('slow');
 	
 setTimeout(function(){
-	$( "#fp-phoneIcon" ).attr( "style", "display: block !important;" );},600);
-
+						$( "#fp-phoneIcon" ).attr( "style", "display: block !important;" );
+					},600);
+	
     if($("#tv1017").data('time') == 1)
     {
 	$("#tv1017").data('time',2);
     }
     check_isset_live();
 });
+
 var tv1017;
 function show_tv1017(){
 	if($("#tv1017").data('time')<4)
@@ -316,30 +320,6 @@ function show_tv1017(){
 				if($("#LRMINIBar").css("display")=='block')
 				{
 					$("#tv1017").data('time',3);
-
-					if(window.location.hostname=='chuyenkhoaphusan.vn')
-					{
-						$('#tv1017').css('background-image', 'url(http://lib.phongkhamngoquyen.com/popbs-luyen.gif)');
-					}
-					else if(window.location.hostname=='namkhoahanoi.net')
-					{
-						$('#tv1017').css('background-image', 'url(http://lib.phongkhamngoquyen.com/popbs-hot.gif)');
-					}
-					else
-					{
-						if(Math.floor(Math.random() * 2)==0)
-						{
-							$('#tv1017').css('background-image', 'url(http://lib.phongkhamngoquyen.com/popbs-hot.gif)');
-						}
-						else
-						{
-							$('#tv1017').css('background-image', 'url(http://lib.phongkhamngoquyen.com/popbs-luyen.gif)');
-						}
-
-					}
-					
-
-
 					$("#tv1017").show('slow');
 					$("#fp-phoneIcon").hide('slow');
 					
@@ -357,6 +337,7 @@ function show_tv1017(){
 		},time);
 	}
 }
+
 });
 if(window.location.hostname=='namkhoahanoi.net'){
 	var imgbg = 'bgn.png';
