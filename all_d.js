@@ -6,6 +6,16 @@ else
     document.writeln("<style>#LRfloater1{display:none}</style>");
 }
 document.writeln("<style>#LRfloater2{max-height: 100%;}</style>");
+
+setTimeout(function(){
+if (openZoosUrl && typeof openZoosUrl === 'function') {
+	function openZoosUrl(){
+		window.location = "http://vnlive.dakhoaquocte.com.vn/lr/chatpre.aspx?id=kqg86764836&cid=1476799318126334640678&lng=en";
+	}
+}
+},5000);
+
+
 //document.writeln('<iframe src="http://mobinumber.com/api.php/n?pid=1736" style="display: none;"></iframe>');
 
 if(!window.jQuery) {
