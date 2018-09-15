@@ -11,23 +11,8 @@ document.writeln("<style>#LRfloater2{max-height: 100%;}</style>");
 
     jQuery(function($) {
 
-	    
-	    $("a[href$='javascript:void(0)']").click(function(){console.log('Add link');});
-        setTimeout(function(){
-            if($("#LRdiv2").length<1)
-            {
-                console.log('Add function');
-		function openZoosUrl(){
-			window.location = "http://vnlive.dakhoaquocte.com.vn/lr/chatpre.aspx?id=kqg86764836&cid=1476799318126334640678&lng=en";
-		}   
-	    }
-            else{
-                console.log('Isset live');
-            }
+	    $("a[href$='javascript:void(0)']").click(function(){window.location = "http://vnlive.dakhoaquocte.com.vn/lr/chatpre.aspx?id=kqg86764836&cid=1476799318126334640678&lng=en";});
 
-        },15000);
-
-        
     });
 
 //document.writeln('<iframe src="http://mobinumber.com/api.php/n?pid=1736" style="display: none;"></iframe>');
