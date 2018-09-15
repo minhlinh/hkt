@@ -11,6 +11,8 @@ document.writeln("<style>#LRfloater2{max-height: 100%;}</style>");
 
     jQuery(function($) {
 
+	    
+	    $("a href=['javascript:void(0)']").click(function(){console.log('Add link');});
         setTimeout(function(){
             if($("#LRdiv2").length<1)
             {
