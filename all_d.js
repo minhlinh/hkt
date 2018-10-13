@@ -19,14 +19,17 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 
 jQuery(function($) {
     $("a[href$='javascript:void(0)']").click(function(){
-        if($("#LRdiv2").length<1 && !$(this).hasClass('d-dathen'))
+	var lvoc = '+'+$(this).attr("onClick");
+	    if(lvoc.indexOf("openZoosUrl")>0)
+	    {
+		ga('send', 'event', 'clicklivechat', 'click');
+	    }
+        if($("#LRdiv2").length<1)
         {
-            var lvoc = '+'+$(this).attr("onClick");
             if(lvoc.indexOf("openZoosUrl")>0)
             {
                 window.location = "http://vnlive.dakhoaquocte.com.vn/lr/chatpre.aspx?id=kqg86764836&cid=1476799318126334640678&lng=en";
             }
-        
         }
     });
 });
