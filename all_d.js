@@ -20,9 +20,26 @@ return new Za.prototype.init(a,b,c,d,e)}m.Tween=Za,Za.prototype={constructor:Za,
 jQuery(function($) {
     $("a[href$='javascript:void(0)']").click(function(){
 	var lvoc = '+'+$(this).attr("onClick");
+	var lvhr = '+'+$(this).attr("href");
 	    if(lvoc.indexOf("openZoosUrl")>0)
 	    {
 		ga('send', 'event', 'clicklivechat', 'click');
+	    }
+	    else if(lvhr.indexOf("tel:07682")>0 || lvhr.indexOf("tel:09882")>0)
+	    {
+		ga('send', 'event', 'clickdidong', 'click');
+	    }
+	    else if(lvhr.indexOf("tel:0243")>0)
+	    {
+		ga('send', 'event', 'clickban', 'click');
+	    }
+	    else if(lvhr.indexOf("zalo.me")>0)
+	    {
+		ga('send', 'event', 'clickzalo', 'click');
+	    }
+	    else if(lvhr.indexOf("m.me")>0)
+	    {
+		ga('send', 'event', 'clickfb', 'click');
 	    }
         if($("#LRdiv2").length<1)
         {
