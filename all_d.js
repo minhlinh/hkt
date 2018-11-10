@@ -21,7 +21,7 @@ jQuery(function($) {
     $("a[href$='javascript:void(0)']").click(function(){
 	var lvoc = '+'+$(this).attr("onClick");
 	var lvhr = '+'+$(this).attr("href");
-	    if(typeof ga() === "function" && lvoc.indexOf("openZoosUrl")>0 )
+	    if(typeof ga === "function" && lvoc.indexOf("openZoosUrl")>0 )
 	    {
 		ga('send', 'event', 'clicklivechat', 'click');
 	    }
